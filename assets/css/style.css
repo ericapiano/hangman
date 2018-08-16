@@ -1,0 +1,44 @@
+body {
+  background: url("../images/astrology.jpg");
+}
+
+.header {
+  background: plum;
+  color: white;
+  font-size: 20px bold;
+  font-family: 'Lobster', cursive;
+  height: 30%;
+  margin-right: 30%;
+  margin-left: 30%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  border: darkorchid 8px solid;
+  text-align: center;
+}
+
+.zodiac {
+  background: white;
+  font-weight: bold;
+  color: purple;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  
+}
+
+footer {
+  clear: both;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  background: plum;
+  padding-top: 10px;
+  border-top: 8px solid darkorchid;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;  
+
+}
