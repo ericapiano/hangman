@@ -16,7 +16,7 @@ function jsGuess() {
 
 }
 
-//CAPTURE THE PLAYERS INPUT
+//CAPTURE PLAYERS INPUT
 document.onkeyup = function (event) {
       var playerGuess = event.key;
 
@@ -27,7 +27,7 @@ document.onkeyup = function (event) {
 
       }
 
-      //test if players guess equals ranLetter, if true it increments wins by 1, and clears used letters array 
+      // if player guess = ranletter, increment wins by 1, and clear used letters array 
       if (playerGuess === ranLetter) {
             alert("yay you win!");
             won++;
@@ -37,7 +37,7 @@ document.onkeyup = function (event) {
             jsGuess();
       }
 
-      //tests if players guess Does Not Equal ranLetter and decreases attempts by 1
+      //if players guess does not equal ranLetter, decrease attempts by 1
       if (playerGuess !== ranLetter) {
             attempts--;
 
