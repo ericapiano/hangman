@@ -23,6 +23,15 @@ function jsGuess() {
 document.onkeyup = function (event) {
       var playerGuess = event.key;
 
+      //HANDELING INCORRECT GUESSES - OUTPUT
+      //this 'if' prevents a letter selected a 2nd time from being written to the usedArray again, although it still counts as a guess
+      if (usedArray.indexOf(playerGuess) < 0) {
+            //this pushes the players incorrect guess to the usedArray and writes it to the HTML
+            usedArray.push(playerGuess);
+            console.log(usedArray);
+
+      }
+
       // HANDELING CORRECT GUESSES
       //test if players guess equals ranLetter, if true it increments wins by 1, and clears used letters array. Supposed to reset guess # to 10 but starts at 9 instead, 
       if (playerGuess === ranLetter) {
@@ -31,11 +40,11 @@ document.onkeyup = function (event) {
             attempts = 10;
             usedArray = [];
 
+            jsGuess();
       }
 
       //HANDELING INCORRECT GUESSES
       //tests if players guess Does Not Equal ranLetter and decriments attempts by 1
-      jsGuess();
       if (playerGuess !== ranLetter) {
             attempts--;
 
@@ -47,21 +56,14 @@ document.onkeyup = function (event) {
             lost++;
             usedArray = []
             attempts = 10;
+
+            jsGuess();
       }
 
-      //HANDELING INCORRECT GUESSES - OUTPUT
-      //this 'if' prevents a letter selected a 2nd time from being written to the usedArray again, although it still counts as a guess
-      if (usedArray.indexOf(playerGuess) >= 0) {
-
-      } else {
-            //this pushes the players incorrect guess to the usedArray and writes it to the HTML
-            usedArray.push(playerGuess);
-            document.getElementById('playerGuess').innerHTML = usedArray;
-            console.log(usedArray);
-
-      }
       //OUTPUT TO HTML
       //these statements write the values/scores generated to the HTML
+
+      document.getElementById('playerGuess').innerHTML = usedArray;
       document.getElementById('won').innerHTML = won;
       document.getElementById('lost').innerHTML = lost;
       document.getElementById('attempts').innerHTML = attempts;
