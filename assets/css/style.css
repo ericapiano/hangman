@@ -24,7 +24,15 @@ body {
   font-size: 16px;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
-  
+}
+
+.tiny {
+  font-size: 12px;
+}
+
+.soundpic {
+  height: 40px;
+  width: 50px;
 }
 
 footer {
