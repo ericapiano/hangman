@@ -10,7 +10,7 @@ var letters = "abcdefghijklmnopqrstuvwxyz"
 ranLetter = letters[Math.floor(Math.random() * letters.length)];
 console.log(ranLetter);
 
-function jsGuess() {
+function compGuess() {
       ranLetter = letters[Math.floor(Math.random() * letters.length)];
       console.log(ranLetter);
 
@@ -34,7 +34,7 @@ document.onkeyup = function (event) {
             attempts = 10;
             usedArray = [];
 
-            jsGuess();
+            compGuess();
       }
 
       //if players guess does not equal ranLetter, decrease attempts by 1
@@ -50,7 +50,7 @@ document.onkeyup = function (event) {
             usedArray = []
             attempts = 10;
 
-            jsGuess();
+            compGuess();
       }
 
       //OUTPUT TO HTML
